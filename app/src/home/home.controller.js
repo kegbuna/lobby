@@ -8,7 +8,7 @@
     HomeController.$inject = ['$firebaseAuth', 'FirebaseRef'];
 
     /* @ngInject */
-    function HomeController($firebaseAuth, ref) {
+    function HomeController($firebaseAuth, FirebaseRef) {
         var vm = this;
         vm.title = 'Welcome';
 
@@ -18,7 +18,7 @@
         ////////////////
 
         function activate() {
-            var auth = $firebaseAuth(ref);
+            var auth = $firebaseAuth(FirebaseRef);
 
             auth.$authWithOAuthPopup("facebook");
         }
