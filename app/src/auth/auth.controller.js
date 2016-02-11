@@ -20,8 +20,14 @@
         ////////////////
 
         function activate() {
-            console.log();
+
         }
+
+
+        FirebaseRef.onAuth(function (authData) {
+            console.log('%c ' + JSON.stringify(authData), 'color: blue');
+            console.dir(authData);
+        });
     }
 
 })();

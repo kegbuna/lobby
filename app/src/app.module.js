@@ -9,7 +9,8 @@
             'ui.router',
             'ngAnimate',
             'firebase',
-            'lobby.home'
+            'lobby.home',
+            'lobby.auth'
         ]);
 
 })();
