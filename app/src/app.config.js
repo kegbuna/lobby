@@ -19,6 +19,12 @@
                 templateUrl: "src/home/home.tpl.html",
                 controller: "HomeController",
                 controllerAs: "home"
+            })
+            .state('auth', {
+                url: '/auth',
+                templateUrl: 'src/auth/auth.tpl.html',
+                controller: 'AuthController',
+                controllerAs: "auth"
             });
     }
 })();
