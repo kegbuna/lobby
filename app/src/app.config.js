@@ -4,13 +4,15 @@
         .module('lobby.app')
         .config(lobbyConfig);
 
-    lobbyConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+    lobbyConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 
     /* @ngInject */
-    function lobbyConfig($stateProvider, $urlRouterProvider) {
+    function lobbyConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
         // If url not recognized, send them home
-        //$urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/home');
+
+        $locationProvider.html5Mode(true);
 
         // Set up the routes
         $stateProvider
@@ -25,6 +27,12 @@
                 templateUrl: 'src/auth/auth.tpl.html',
                 controller: 'AuthController',
                 controllerAs: "auth"
-            });
+            })
+            .state('chat', {
+                url: '/chat',
+                templateUrl: 'src/chat/chat.tpl.html',
+                controller: 'ChatController',
+                controllerAs: 'chat'
+            })
     }
 })();

@@ -10,11 +10,11 @@
     /* @ngInject */
     function UserService(FirebaseRef) {
         initiate();
-        this.getUserData = getUserData;
+        this.getUser = getUser;
 
         ////////////////
 
-        function getUserData() {
+        function getUser() {
             return null;
         }
 
