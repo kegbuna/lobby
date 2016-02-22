@@ -3,14 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Lobby</title>
-        <base href="/" />
+        <base href="/app/" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
     </head>
-    <body>
+    <body ng-controller="CoreController as cc">
         <nav>
-            <ul>
-                <li><a ui-sref="home">Home</a></li>
-            </ul>
+            <div class="ui large top fixed hidden menu">
+                <div class="ui container">
+                    <a class="item" ui-sref="{{nav.value}}" ng-repeat="nav in cc.navItems" ng-class="{active: nav.value === $state.current.name}" ng-bind="nav.label"></a>
+                </div>
+            </div>
         </nav>
         <div ui-view>
 
@@ -27,10 +29,15 @@
         <script src="src/app.config.js"></script>
         <script src="src/home/home.module.js"></script>
         <script src="src/home/home.controller.js"></script>
+        <script src="src/core/core.module.js"></script>
+        <script src="src/core/core.controller.js"></script>
         <script src="src/auth/auth.module.js"></script>
         <script src="src/auth/auth.controller.js"></script>
         <script src="src/auth/auth.service.js"></script>
         <script src="src/user/user.module.js"></script>
         <script src="src/user/user.service.js"></script>
+        <script src="src/chat/chat.module.js"></script>
+        <script src="src/chat/chat.controller.js"></script>
+        <script src="src/chat/chat.service.js"></script>
     </body>
 </html>

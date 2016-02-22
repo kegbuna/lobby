@@ -10,7 +10,8 @@
             'ngAnimate',
             'firebase',
             'lobby.home',
-            'lobby.auth'
+            'lobby.auth',
+            'lobby.core'
         ]);
 
 })();

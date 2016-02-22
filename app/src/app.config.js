@@ -17,16 +17,16 @@
         // Set up the routes
         $stateProvider
             .state('home', {
-                url: "/home",
-                templateUrl: "src/home/home.tpl.html",
-                controller: "HomeController",
-                controllerAs: "home"
+                url: '/home',
+                templateUrl: 'src/home/home.tpl.html',
+                controller: 'HomeController',
+                controllerAs: 'home'
             })
             .state('auth', {
                 url: '/auth',
                 templateUrl: 'src/auth/auth.tpl.html',
                 controller: 'AuthController',
-                controllerAs: "auth"
+                controllerAs: 'auth'
             })
             .state('chat', {
                 url: '/chat',
