@@ -15,15 +15,24 @@ server.register(require('inert'), (err) => {
     // Add the route
     server.route({
         method: 'GET',
-        path:'/{param*}',
-        handler: {
-            directory : {
-                path : './app/',
-                index : true,
-                redirectToSlash : true
-            }
+        path:'/app/{state*}',
+        handler: function (request, reply) {
+            console.dir(request.params);
+            reply.file('./app/index.html');
         }
     });
+
+    server.route({
+        method: 'GET',
+        path: '/app/src/{path*}',
+        handler: {
+            directory: {
+                path: './app/src/',
+                index: true,
+                redirectToSlash: true
+            }
+        }
+    })
 
 });
 
