@@ -3,7 +3,8 @@
 
     angular
         .module('lobby.core', [
-            'lobby.auth'
+            'lobby.auth',
+            'ui.router'
         ]);
 
 })();
