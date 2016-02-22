@@ -1,11 +1,27 @@
 {
-  "name": "lobby",
+  "name": "lobby-app",
   "version": "0.0.1",
-  "description": "",
+  "description": "Lobby is a chat application that organizes rooms based on locations. Allowing people to have meaningful conversations based on shared experiences.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "kegbuna",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kegbuna/lobby.git"
+  },
+  "keywords": [
+    "chat",
+    "gps"
+  ],
+  "bugs": {
+    "url": "https://github.com/kegbuna/lobby/issues"
+  },
+  "homepage": "https://github.com/kegbuna/lobby#readme",
+  "dependencies": {
+    "hapi": "^13.0.0",
+    "inert": "^3.2.0"
+  }
 }

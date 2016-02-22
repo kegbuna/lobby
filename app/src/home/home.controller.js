@@ -5,10 +5,10 @@
         .module('lobby.home')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$firebaseAuth', 'FirebaseRef'];
+    HomeController.$inject = [];
 
     /* @ngInject */
-    function HomeController($firebaseAuth, ref) {
+    function HomeController() {
         var vm = this;
         vm.title = 'Welcome';
 
@@ -18,11 +18,8 @@
         ////////////////
 
         function activate() {
-            var auth = $firebaseAuth(ref);
 
-            auth.$authWithOAuthPopup("facebook");
         }
     }
 
 })();
-
