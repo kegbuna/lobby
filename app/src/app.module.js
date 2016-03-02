@@ -11,6 +11,7 @@
             'firebase',
             'lobby.home',
             'lobby.auth',
+            'lobby.chat',
             'lobby.core'
         ]);
 

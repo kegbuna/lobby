@@ -22,6 +22,17 @@
             value: "chat"
         }];
 
+        vm.accountItems = [
+        {
+            label: "Log In",
+            value: "account.login"
+        },
+        {
+            label: "Create Account",
+            value: "account.create"
+        }];
+
+
         activate();
 
         ////////////////

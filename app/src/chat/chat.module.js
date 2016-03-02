@@ -4,6 +4,7 @@
     angular
         .module('lobby.chat', [
             'ui.router',
-            'FirebaseRef'
+            'lobby.vendors',
+            'firebase'
         ]);
 })();

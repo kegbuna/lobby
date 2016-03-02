@@ -4,7 +4,8 @@
     angular
         .module('lobby.core', [
             'lobby.auth',
-            'ui.router'
+            'ui.router',
+            'ngMaterial'
         ]);
 
 })();
